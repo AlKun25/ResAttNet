@@ -16,7 +16,7 @@ We have used the PyTorch-Lightning Framework to implement a Residual Attention N
 | CIFAR-10 | Attention-32  | SGD | - | - | PyTorch-Lightning|
 | CIFAR-100 | Attention-56 | SGD | - | - | PyTorch-Lightning|
 | CIFAR-10 | Attention-56  | SGD | - | - | PyTorch-Lightning|
-| CIFAR-100 | Attention-92 | SGD | 2.80 | 2.90 | PyTorch-Lightning|
+| CIFAR-100 | Attention-92 | SGD | 2.95 | 2.90 | PyTorch-Lightning|
 | CIFAR-10 | Attention-92 | SGD | 1.12 | 1.01 | PyTorch-Lightning|
 
 ## Further Improvements
