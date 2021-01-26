@@ -16,6 +16,8 @@ We have used the PyTorch-Lightning Framework to implement a Residual Attention N
 | CIFAR-10 | Attention-32  | SGD | - | - | PyTorch-Lightning|
 | CIFAR-100 | Attention-56 | SGD | - | - | PyTorch-Lightning|
 | CIFAR-10 | Attention-56  | SGD | - | - | PyTorch-Lightning|
+| CIFAR-100 | Attention-92 | SGD | - | - | PyTorch-Lightning|
+| CIFAR-10 | Attention-92 | SGD | 1.12 | 1.01 | PyTorch-Lightning|
 
 ## Further Improvements
 We were able to implement only a few Res-Net architectures and that too only on 2 datasets because of the computional power and time required to run the model on our machines. Areas we are looking to improve on and work in the future
