@@ -13,12 +13,13 @@ from torchvision import transforms
 import sys
 sys.path.append('.')
 
-from data.CIFAR10data import *
+from Data.CIFAR10data import *
+from Data.CIFAR100data import *
 from layers.residual_attention_network import *
         
 class ResidualAttentionModel(pl.LightningModule):
     # for input size 32
-    def __init__(self):
+    def __init__(self, n_layers):
         super().__init__()
         self.conv1 = nn.Sequential(
             nn.Conv2d(3, 32, kernel_size=3, stride=1, padding=1, bias=False),
@@ -43,7 +44,7 @@ class ResidualAttentionModel(pl.LightningModule):
             nn.ReLU(inplace=True),
             nn.AvgPool2d(kernel_size=8)
         )
-        self.fc = nn.Linear(1024,10)
+        self.fc = nn.Linear(1024,n_layers)
         # self.model = model
 
     def forward(self, x):
