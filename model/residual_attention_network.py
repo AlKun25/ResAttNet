@@ -109,16 +109,16 @@ class ResidualAttentionModel_56(pl.LightningModule):
         return out
 
 
-class ResidualAttentionModel_92_32input(pl.LightningModule):
+class ResidualAttentionModel_92_32(pl.LightningModule):
     # for input size 32
     def __init__(self):
-        super(ResidualAttentionModel_92_32input, self).__init__()
+        super(ResidualAttentionModel_92_32, self).__init__()
         self.conv1 = nn.Sequential(
             nn.Conv2d(3, 32, kernel_size=5, stride=1, padding=2, bias=False),
             nn.BatchNorm2d(32),
             nn.ReLU(inplace=True)
         )  # 32*32
-        self.mpool1 = nn.MaxPool2d(kernel_size=2, stride=2, padding=0)  # 16*16
+        # self.mpool1 = nn.MaxPool2d(kernel_size=2, stride=2, padding=0)  # 16*16
         self.residual_block1 = ResidualBlock(32, 128)  # 16*16
         self.attention_module1 = AttentionModule_stage1_cifar(128, 128)  # 16*16
         self.residual_block2 = ResidualBlock(128, 256, 2)  # 8*8
@@ -140,7 +140,7 @@ class ResidualAttentionModel_92_32input(pl.LightningModule):
 
     def forward(self, x):
         out = self.conv1(x)
-        out = self.mpool1(out)
+        # out = self.mpool1(out)
         # print(out.data)
         out = self.residual_block1(out)
         out = self.attention_module1(out)
