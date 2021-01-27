@@ -10,19 +10,19 @@ We have used the PyTorch-Lightning Framework to implement a Residual Attention N
 
 ## Observations drawn from our implementation
 
-| Dataset Used | Architecture implemented (Attention Type) | Optimiser Used | Training Loss | Test Loss | Framework Used |
-|---|---|---|---|---|---|
-| CIFAR-100 | Attention-32 | SGD | 1.27 | 1.61 | PyTorch-Lightning|
-| CIFAR-10 | Attention-32  | SGD | - | - | PyTorch-Lightning|
-| CIFAR-100 | Attention-56 | SGD | - | - | PyTorch-Lightning|
-| CIFAR-10 | Attention-56  | SGD | - | - | PyTorch-Lightning|
-| CIFAR-100 | Attention-92 | SGD | 2.95 | 2.90 | PyTorch-Lightning|
-| CIFAR-10 | Attention-92 | SGD | 1.12 | 1.01 | PyTorch-Lightning|
+| Dataset Used | Architecture implemented (Attention Type) | Optimiser Used | Image size | Training Loss | Test Loss | Framework Used |
+|---|---|---|---|---|---|---|
+| CIFAR-100 | Attention-92  | SGD | 32  | 1.26 | 1.58 | PyTorch-Lightning|
+| CIFAR-10  | Attention-92  | SGD | 32  | 0.51 | 0.53 | PyTorch-Lightning|
+| CIFAR-100 | Attention-56  | SGD | 224 | 1.42 | 1.80 | PyTorch-Lightning|
+| CIFAR-10  | Attention-56  | SGD | 224 | 0.61 | 0.65 | PyTorch-Lightning|
+| CIFAR-100 | Attention-92  | SGD | 224 | 2.95 | 2.90 | PyTorch-Lightning|
+| CIFAR-10  | Attention-92  | SGD | 224 | 1.12 | 1.01 | PyTorch-Lightning|
 
 ## Further Improvements
 We were able to implement only a few Res-Net architectures and that too only on 2 datasets because of the computional power and time required to run the model on our machines. Areas we are looking to improve on and work in the future
-- [ ] Implementing Attention-56 Architecture
-- [ ] Implementing Attention-92 Architecture
+- [X] Implementing Attention-56 Architecture
+- [X] Implementing Attention-92 Architecture
 - [ ] Implementing Attention-128, Attention-156 Architecture
 - [ ] Implementing the Paper using other Deep Learning Frameworks like Tensorflow
 
