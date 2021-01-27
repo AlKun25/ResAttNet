@@ -45,8 +45,29 @@ We were able to implement only a few Res-Net architectures and that too only on 
     }
 
 ## Contributors
-[Harshit Aggarwal](https://github.com/harshitaggarwal01)
 
-[Kunal Mundada](https://github.com/AlKun25)
+<table>
+  <tr>
+   <td align="center"><img src="https://media-exp1.licdn.com/dms/image/C4E35AQF2KrMALKglyA/profile-framedphoto-shrink_400_400/0/1603973015001?e=1611810000&v=beta&t=5ORAAY8aOcTJRDJWMtNKL1KjPQMK8jqMAixI2FepgII" width="210px;" height="230px;" alt=""/><br /><sub><b>Harshit Aggarwal</b></sub></a><br />
+    <p align="center">
+   
+   <a href="https://www.linkedin.com/in/harshit-a-46b4a0b7/" alt="Linkedin"><img src="https://raw.githubusercontent.com/jayehernandez/jayehernandez/3f5402efef9a0ae89211a6e04609558e862ca616/readme/linkedin-fill.svg"></a>
+  </p>
 
-[Pranav B](https://github.com/Pranav1007)
+</td>
+   
+   <td align="center"><img src="https://media-exp1.licdn.com/dms/image/C5603AQE_ev0fCPT0Uw/profile-displayphoto-shrink_400_400/0/1581639518725?e=1617235200&v=beta&t=AzqxcLK4xAwzH5ivzPM77rNndQ3eeg9Ac51ufXrY0-U" width="210px;" height="230px;"  alt=""/><br/><sub><b>Kunal Mundada</b></sub></a><br />
+<p align="center">
+    
+   <a href="https://www.linkedin.com/in/kunalmundada/" alt="Linkedin"><img src="https://raw.githubusercontent.com/jayehernandez/jayehernandez/3f5402efef9a0ae89211a6e04609558e862ca616/readme/linkedin-fill.svg"></a>
+  </p>
+</td>
+   
+   <td align="center"><img src="https://media-exp1.licdn.com/dms/image/C5603AQHb5g33WP2K_Q/profile-displayphoto-shrink_400_400/0/1601352727491?e=1617235200&v=beta&t=U3K08OW14cdA7JltrCiBf9v2-YNp3q-MYglbNMbiPBg" width="240px"; height="230px;" alt=""/><br /><sub><b>Pranav B Kashyap</b></sub></a><br />
+<p align="center">
+   
+   <a href="https://www.linkedin.com/in/pranav-b-kashyap-1994001b6/" alt="Linkedin"><img src="https://raw.githubusercontent.com/jayehernandez/jayehernandez/3f5402efef9a0ae89211a6e04609558e862ca616/readme/linkedin-fill.svg"></a>
+  </p>
+</td>
+    </tr>
+    </table>
