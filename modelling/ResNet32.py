@@ -5,45 +5,21 @@ import torch.nn as nn
 from torch.nn import functional as F
 import pytorch_lightning as pl
 import time
-from torchvision.datasets import CIFAR10
+import os
 from torch.autograd import Variable
 from torch.utils.data import DataLoader
 from torchvision import transforms
-from .model.attention_module import *
 
-class CIFAR10DataModule(pl.LightningDataModule):
+import sys
+sys.path.append('.')
 
-    def prepare_data(self):
-        # prepare transforms standard to CIFAR-10
-        CIFAR10(root='./data/', train=True, download=True)
-        CIFAR10(root='./data/', train=False, download=True)
-
-    def train_dataloader(self):
-        train_transform = transforms.Compose([  transforms.RandomHorizontalFlip(),
-                                                transforms.RandomCrop((32, 32), padding=4),   #left, top, right, bottom, 
-                                                # transforms.Scale(224),
-                                                transforms.ToTensor()
-                                            ])
-        cifar10_train = CIFAR10(root='./data/', train=True, download=False, transform=train_transform)
-        cifar10_train = DataLoader( dataset=cifar10_train, 
-                                    batch_size=16, 
-                                    shuffle=True, 
-                                    num_workers=4
-                                )
-        return cifar10_train
-
-    def test_dataloader(self):
-        test_transform = transforms.Compose([transforms.ToTensor()])
-        cifar10_test = CIFAR10(root='./data/', train=False,download=False,transform=test_transform)
-        cifar10_test = DataLoader(  dataset=cifar10_test, 
-                                    batch_size=20, 
-                                    shuffle=False
-                                )
-        return cifar10_test
-
+from Data.CIFAR10data import *
+from Data.CIFAR100data import *
+from layers.residual_attention_network import *
+        
 class ResidualAttentionModel(pl.LightningModule):
     # for input size 32
-    def __init__(self):
+    def __init__(self, n_layers):
         super().__init__()
         self.conv1 = nn.Sequential(
             nn.Conv2d(3, 32, kernel_size=3, stride=1, padding=1, bias=False),
@@ -68,7 +44,7 @@ class ResidualAttentionModel(pl.LightningModule):
             nn.ReLU(inplace=True),
             nn.AvgPool2d(kernel_size=8)
         )
-        self.fc = nn.Linear(1024,10)
+        self.fc = nn.Linear(1024,n_layers)
         # self.model = model
 
     def forward(self, x):
@@ -116,22 +92,10 @@ class ResidualAttentionModel(pl.LightningModule):
     def configure_optimizers(self):
         optimizer = torch.optim.SGD(self.parameters(), lr=0.1, momentum=0.9, nesterov=True, weight_decay=0.0001)
         return optimizer
-
+        
 class LitProgressBar(pl.callbacks.ProgressBar):
 
     def init_train_tqdm(self):
         bar = super().init_validation_tqdm()
         bar.set_description('running training ...')
         return bar
-
-bar = LitProgressBar()
-data_module = CIFAR10DataModule()
-data_module.prepare_data()
-test_data = data_module.test_dataloader()
-train_data = data_module.train_dataloader()
-
-model = ResidualAttentionModel()
-trainer = pl.Trainer(max_epochs=3, gpus=-1, callbacks=[bar], accelerator='ddp')
-
-trainer.fit(model, train_data)
-trainer.test(test_dataloaders=test_data, verbose=True)
