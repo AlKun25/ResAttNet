@@ -4,11 +4,11 @@
 ![RESCON](https://user-images.githubusercontent.com/70643852/105801454-27705e80-5fbf-11eb-97c7-9cc78d4b2636.png)
 <h4 align="center"> Interactions between the Feature and Attention Masks of the Residual Attetntion Network [Image Referenced from the Paper] <h4>
 
-## Basic Model we have implemeted
+## Basic Model 
 
 We have used the PyTorch-Lightning Framework to implement a Residual Attention Network which can be used for Image Classification. A Residual Attention Network is nothing but a, "Convolutional Neural Network using Attention Mechanism which can implement State-of-art feed forward network architecture", as mentioned in the abstract of the paper.
 
-## Observations drawn from our implementation
+## Observations 
 
 | Dataset Used | Architecture implemented (Attention Type) | Optimiser Used | Image size | Training Loss | Test Loss | Framework Used |
 |---|---|---|---|---|---|---|
