@@ -1,3 +1,8 @@
+'''
+This file should contain things that are not directly related to training, but could help it.
+Like ProgressBar, Profiler, logger, etc.
+'''
+
 import pytorch_lightning as pl
 
 class LitProgressBar(pl.callbacks.ProgressBar):
