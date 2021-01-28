@@ -1,25 +1,21 @@
-from pytorch_lightning.accelerators import accelerator
-from pytorch_lightning.core.datamodule import LightningDataModule
-import torch 
-import torch.nn as nn 
+#Imports
+import torch
+from torch import nn
 from torch.nn import functional as F
-import pytorch_lightning as pl
-import time
-import os
+import functools
 from torch.autograd import Variable
-from torch.utils.data import DataLoader
-from torchvision import transforms
+import numpy as np
+import pytorch_lightning as pl
 
 import sys
-sys.path.append('.')
+sys.path.append('.') # goes out of the current folder into ResCon folder
 
-from Data.CIFAR10data import *
-from Data.CIFAR100data import *
-from layers.residual_attention_network import *
-        
-class ResidualAttentionModel(pl.LightningModule):
+from layers.basic_layers import ResidualBlock
+from layers.attention_module import *
+
+class ResidualAttentionModel_92_32(pl.LightningModule):
     # for input size 32
-    def __init__(self, n_layers):
+    def __init__(self, n_classes):
         super().__init__()
         self.conv1 = nn.Sequential(
             nn.Conv2d(3, 32, kernel_size=3, stride=1, padding=1, bias=False),
@@ -44,7 +40,7 @@ class ResidualAttentionModel(pl.LightningModule):
             nn.ReLU(inplace=True),
             nn.AvgPool2d(kernel_size=8)
         )
-        self.fc = nn.Linear(1024,n_layers)
+        self.fc = nn.Linear(1024,n_classes)
         # self.model = model
 
     def forward(self, x):

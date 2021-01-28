@@ -5,10 +5,6 @@ import functools
 from torch.autograd import Variable
 import numpy as np
 
-import sys
-sys.path.append('.')
-
-
 class ResidualBlock(pl.LightningModule):
     def __init__(self, input_channels, output_channels, stride=1):
         super(ResidualBlock, self).__init__()

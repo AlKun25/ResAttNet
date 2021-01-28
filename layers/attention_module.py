@@ -10,7 +10,6 @@ sys.path.append('.')
 
 from layers.basic_layers import ResidualBlock
 
-
 class AttentionModule_pre(pl.LightningModule):
 
     def __init__(self, in_channels, out_channels, size1, size2, size3):
