@@ -1,5 +1,5 @@
 <h1 align="center"> Team Lynx - RESCON </h1>
-<h3 align="center"> Original Repository of Team Lynx for ResCon 2021 <h3>
+<h3 align="center"> Residual Attention Network for Image Classification <h3>
 
 ![RESCON](https://user-images.githubusercontent.com/70643852/105801454-27705e80-5fbf-11eb-97c7-9cc78d4b2636.png)
 <h4 align="center"> Interactions between the Feature and Attention Masks of the Residual Attetntion Network [Image Referenced from the Paper] <h4>
