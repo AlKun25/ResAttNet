@@ -48,7 +48,7 @@ We were able to implement only a few Res-Net architectures and that too only on 
 
 <table>
   <tr>
-   <td align="center"><img src="https://media-exp1.licdn.com/dms/image/C4E35AQF2KrMALKglyA/profile-framedphoto-shrink_400_400/0/1603973015001?e=1611810000&v=beta&t=5ORAAY8aOcTJRDJWMtNKL1KjPQMK8jqMAixI2FepgII" width="210px;" height="230px;" alt=""/><br /><sub><b>Harshit Aggarwal</b></sub></a><br />
+   <td align="center"><img src="https://github.com/harshitaggarwal01/Octahacks/blob/main/Demo%20Images%20%26%20Profiles/harshit.jfif" width="210px;" height="230px;" alt=""/><br /><sub><b>Harshit Aggarwal</b></sub></a><br />
     <p align="center">
    
    <a href="https://www.linkedin.com/in/harshit-a-46b4a0b7/" alt="Linkedin"><img src="https://raw.githubusercontent.com/jayehernandez/jayehernandez/3f5402efef9a0ae89211a6e04609558e862ca616/readme/linkedin-fill.svg"></a>
