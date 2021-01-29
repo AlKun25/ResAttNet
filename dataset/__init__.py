@@ -4,7 +4,5 @@
 
 """
 
-
-from .RAN_56_224 import *
-from .RAN_92_224 import *
-from .RAN_92_32 import *
+from .CIFAR10data import *
+from .CIFAR100data import *

@@ -1,12 +1,12 @@
-from utilities import *
+from utilities import LitProgressBar
 import pytorch_lightning as pl
 
 import sys
 sys.path.append('.')
 
-from data import *
+import dataset
 from layers import *
-from model import *
+import model
 
 '''
 n_classes and image_size are important variable that need to be changed to train different models
@@ -17,13 +17,13 @@ n_classes = 10 # number of classes for classification
 image_size = 32 # size of the input image in pixels 
 
 bar = LitProgressBar()
-data_module = CIFAR10DataModule(image_size)
-data_module.prepare_data()
+data_module = dataset.CIFAR10DataModule(image_size)
+data_module.prepare_data(image_size)
 test_data = data_module.test_dataloader()
 train_data = data_module.train_dataloader()
 
-model = ResidualAttentionModel_92_32(n_classes)
+model = model.ResidualAttentionModel_92_32(n_classes)
 trainer = pl.Trainer(max_epochs=10, gpus=-1, callbacks=[bar], accelerator='ddp')
 
-trainer.fit(model, train_data_10)
-trainer.test(test_dataloaders=test_data_10, verbose=True)
+trainer.fit(model, train_data)
+trainer.test(test_dataloaders=test_data, verbose=True)
