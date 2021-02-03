@@ -8,6 +8,10 @@
 
 We have used the PyTorch-Lightning Framework to implement a Residual Attention Network which can be used for Image Classification. A Residual Attention Network is nothing but a, "Convolutional Neural Network using Attention Mechanism which can implement State-of-art feed forward network architecture", as mentioned in the abstract of the paper.
 
+You can run the [notebook](https://github.com/AlKun25/ResAttNet/blob/main/notebook.ipynb) for testing our code.
+
+For training the model, you have to run [train_pl.py](https://github.com/AlKun25/ResAttNet/blob/main/tools/train_pl.py)
+
 ## Observations 
 
 | Dataset Used | Architecture implemented (Attention Type) | Optimiser Used | Image size | Training Loss | Test Loss | 
