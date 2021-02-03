@@ -10,14 +10,16 @@ We have used the PyTorch-Lightning Framework to implement a Residual Attention N
 
 ## Observations 
 
-| Dataset Used | Architecture implemented (Attention Type) | Optimiser Used | Image size | Training Loss | Test Loss | Framework Used |
-|---|---|---|---|---|---|---|
-| CIFAR-100 | Attention-92  | SGD | 32  | 1.26 | 1.58 | PyTorch-Lightning|
-| CIFAR-10  | Attention-92  | SGD | 32  | 0.51 | 0.53 | PyTorch-Lightning|
-| CIFAR-100 | Attention-56  | SGD | 224 | 1.42 | 1.80 | PyTorch-Lightning|
-| CIFAR-10  | Attention-56  | SGD | 224 | 0.61 | 0.65 | PyTorch-Lightning|
-| CIFAR-100 | Attention-92  | SGD | 224 | 2.95 | 2.90 | PyTorch-Lightning|
-| CIFAR-10  | Attention-92  | SGD | 224 | 1.12 | 1.01 | PyTorch-Lightning|
+| Dataset Used | Architecture implemented (Attention Type) | Optimiser Used | Image size | Training Loss | Test Loss | 
+|---|---|---|---|---|---|
+| CIFAR-100 | Attention-92  | SGD | 32  | 1.26 | 1.58 | 
+| CIFAR-10  | Attention-92  | SGD | 32  | 0.51 | 0.53 | 
+| CIFAR-100 | Attention-56  | SGD | 224 | 1.42 | 1.80 | 
+| CIFAR-10  | Attention-56  | SGD | 224 | 0.61 | 0.65 | 
+| CIFAR-100 | Attention-92  | SGD | 224 | 2.95 | 2.90 | 
+| CIFAR-10  | Attention-92  | SGD | 224 | 1.12 | 1.01 | 
+
+Some of the models' saved checkpoints can be downloaded from the [drive](https://drive.google.com/drive/folders/1k-rIobWZXbE5JOrBZY-0x4GO6W4aQGc9?usp=sharing)
 
 ## Further Improvements
 We were able to implement only a few Res-Net architectures and that too only on 2 datasets because of the computional power and time required to run the model on our machines. Areas we are looking to improve on and work in the future
